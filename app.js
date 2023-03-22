@@ -15,6 +15,32 @@ async function getQuote(){
     console.log(data);
     const heading = document.querySelector("#quote")
     heading.textContent = data.data[0]
+
+    let quote = data.data[0]
+    let quoteHistory = document.querySelector("#quote-history")
+let nextQuote = document.createElement("ol")
+
+    nextQuote.textContent = quote
+    quoteHistory.appendChild(nextQuote)
     }
-    getQuote()
+  
     
+    //task 2
+let buttonPress = document.querySelector("#new-quote-button")
+
+buttonPress.addEventListener("click", getQuote)
+
+//task 3
+
+/* 
+
+let quote = data.dat[0]
+let quoteHistory = document.querySelector("#quote-history")
+let nextQuote = document.createElement("ol")
+
+nextQuote.textContent = quote
+quoteHistory.appendChild(nextQuote)
+
+paste the above in to the function
+
+*/
